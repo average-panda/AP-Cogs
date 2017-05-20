@@ -38,12 +38,7 @@ class test:
         """This does stuff!"""
 
         #Your code will go here
-        await self.bot.say("TEST")   
-        message.channel.send('', {embed: {
-        color: 3447003,
-        description: 'A very simple Embed!'
-}});
-   
+        await self.bot..send_message(message.channel, embed=testEmbed)
 
 def setup(bot):
     bot.add_cog(test(bot))
