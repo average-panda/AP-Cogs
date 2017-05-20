@@ -30,6 +30,8 @@ class test:
     async def embed(self):
         """This does stuff!"""
 
+        Tembed = discord.Embed(title="test", colour=discord.Colour(0x687508), url="https://discordapp.com", description="test")
+
         #Your code will go here
         await self.bot.say(embed=Tembed)
              
