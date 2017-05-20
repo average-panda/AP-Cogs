@@ -33,15 +33,5 @@ class test:
         #Your code will go here
         await self.bot.say(embed=Tembed)
              
-    @commands.command()
-    async def embed4(self):
-        """This does stuff!"""
-        Tembed = discord.Embed(title="test", colour=discord.Colour(0x687508), url="https://discordapp.com", description="test")
-        Tembed.set_image(url="https://cdn.discordapp.com/embed/avatars/0.png")
-        Tembed.set_thumbnail(url="https://cdn.discordapp.com/embed/avatars/0.png")
-
-        #Your code will go here
-        await self.bot.say(embed=Tembed)
-
 def setup(bot):
     bot.add_cog(test(bot))
