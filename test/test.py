@@ -13,6 +13,13 @@ class test:
 
         #Your code will go here
         await self.bot.say("ONE PUNCH! And " + user.mention + " is out! ლ(ಠ益ಠლ)")
+        
+    @commands.command()
+    async def mycom(self):
+        """This does stuff!"""
+
+        #Your code will go here
+        await self.bot.say("I can do stuff!")
 
 def setup(bot):
     bot.add_cog(test(bot))
