@@ -9,16 +9,8 @@ class test:
         self.bot = bot
         
     Tembed = discord.Embed(title="test", colour=discord.Colour(0x687508), url="https://discordapp.com", description="test")
-    
     Tembed.set_image(url="https://cdn.discordapp.com/embed/avatars/0.png")
     Tembed.set_thumbnail(url="https://cdn.discordapp.com/embed/avatars/0.png")
-    Tembed.set_author(name="author name", url="https://discordapp.com", icon_url="https://cdn.discordapp.com/embed/avatars/0.png")
-    Tembed.set_footer(text="footer text", icon_url="https://cdn.discordapp.com/embed/avatars/0.png")
-
-    Tembed.add_field(name="1", value="some of these properties have certain limits...")
-    Tembed.add_field(name="2", value="try exceeding some of them!")
-    Tembed.add_field(name="3", value="an informative error should show up, and this view will remain as-is until all issues are fixed")
-    Tembed.add_field(name="<:thonkang:219069250692841473>", value="???")
 
     @commands.command()
     async def punch(self, user : discord.Member):
@@ -54,6 +46,13 @@ class test:
         
         #Your code will go here
         await self.bot.say(content="TEST TEST TEST ```TEST TEST TEST```")
+        
+    @commands.command()
+    async def embed2(self):
+        """This does stuff!"""
+        
+        #Your code will go here
+        await self.bot.send_message(message.channel, embed=Tembed)
 
 def setup(bot):
     bot.add_cog(test(bot))
