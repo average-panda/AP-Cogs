@@ -8,7 +8,7 @@ class test:
     def __init__(self, bot):
         self.bot = bot
         
-    Tembed = discord.Embed(title="title ~~(did you know you can have markdown here too?)~~", colour=discord.Colour(0x687508), url="https://discordapp.com", description="this supports [named links](https://discordapp.com) on top of the previously shown subset of markdown. ```\nyes, even code blocks```")
+    Tembed = discord.Embed(title="test", colour=discord.Colour(0x687508), url="https://discordapp.com", description="test")
     
     Tembed.set_image(url="https://cdn.discordapp.com/embed/avatars/0.png")
     Tembed.set_thumbnail(url="https://cdn.discordapp.com/embed/avatars/0.png")
@@ -46,7 +46,14 @@ class test:
         """This does stuff!"""
         
         #Your code will go here
-        await self.bot.say(content="this `supports` __a__ **subset** *of* ~~markdown~~ 😃 ```js\nfunction foo(bar) {\n  console.log(bar);\n}\n\nfoo(1);```", embed=Tembed)
+        await self.bot.say(content="TEST TEST TEST ```TEST TEST TEST```", Embed=Tembed)
+
+    @commands.command()
+    async def embed3(self):
+        """This does stuff!"""
+        
+        #Your code will go here
+        await self.bot.say(content="TEST TEST TEST ```TEST TEST TEST```")
 
 def setup(bot):
     bot.add_cog(test(bot))
