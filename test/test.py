@@ -8,7 +8,8 @@ class test:
     def __init__(self, bot):
         self.bot = bot
         
-    class testEmbed = discord.Embed(title='test', description='test', url='https://github.com/Rapptz/discord.py/issues/424', colour = discord.Colour.blue())
+    class testEmbed
+    testEmbed=discord.Embed(title='test', description='test', url='https://github.com/Rapptz/discord.py/issues/424', colour = discord.Colour.blue())
     testEmbed.set_thumbnail(url='https://github.com/Rapptz/discord.py/issues/424')
     testEmbed.set_author(name='test')
     testEmbed.set_footer(text='test')
