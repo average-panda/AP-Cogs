@@ -31,7 +31,7 @@ class test:
         """This does stuff!"""
 
         #Your code will go here
-        await self.bot.say(message.channel, embed=testEmbed)
+        await self.bot.say(embed=testEmbed)
 
 def setup(bot):
     bot.add_cog(test(bot))
