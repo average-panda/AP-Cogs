@@ -8,7 +8,7 @@ class test:
     def __init__(self, bot):
         self.bot = bot
         
-    embed = discord.Embed(title="title ~~(did you know you can have markdown here too?)~~", colour=discord.Colour(0x687508), url="https://discordapp.com", description="this supports [named links](https://discordapp.com) on top of the previously shown subset of markdown. ```\nyes, even code blocks```", timestamp=datetime.datetime.utcfromtimestamp(1495279358))
+    embed = discord.Embed(title="title ~~(did you know you can have markdown here too?)~~", colour=discord.Colour(0x687508), url="https://discordapp.com", description="this supports [named links](https://discordapp.com) on top of the previously shown subset of markdown. ```\nyes, even code blocks```")
     
     embed.set_image(url="https://cdn.discordapp.com/embed/avatars/0.png")
     embed.set_thumbnail(url="https://cdn.discordapp.com/embed/avatars/0.png")
