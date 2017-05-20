@@ -8,11 +8,17 @@ class test:
     def __init__(self, bot):
         self.bot = bot
         
-    class testEmbed
-    testEmbed=discord.Embed(title='test', description='test', url='https://github.com/Rapptz/discord.py/issues/424', colour = discord.Colour.blue())
-    testEmbed.set_thumbnail(url='https://github.com/Rapptz/discord.py/issues/424')
-    testEmbed.set_author(name='test')
-    testEmbed.set_footer(text='test')
+    embed = discord.Embed(title="title ~~(did you know you can have markdown here too?)~~", colour=discord.Colour(0x687508), url="https://discordapp.com", description="this supports [named links](https://discordapp.com) on top of the previously shown subset of markdown. ```\nyes, even code blocks```", timestamp=datetime.datetime.utcfromtimestamp(1495279358))
+    
+    embed.set_image(url="https://cdn.discordapp.com/embed/avatars/0.png")
+    embed.set_thumbnail(url="https://cdn.discordapp.com/embed/avatars/0.png")
+    embed.set_author(name="author name", url="https://discordapp.com", icon_url="https://cdn.discordapp.com/embed/avatars/0.png")
+    embed.set_footer(text="footer text", icon_url="https://cdn.discordapp.com/embed/avatars/0.png")
+
+    embed.add_field(name="1", value="some of these properties have certain limits...")
+    embed.add_field(name="2", value="try exceeding some of them!")
+    embed.add_field(name="3", value="an informative error should show up, and this view will remain as-is until all issues are fixed")
+    embed.add_field(name="<:thonkang:219069250692841473>", value="???")
 
     @commands.command()
     async def punch(self, user : discord.Member):
@@ -38,9 +44,9 @@ class test:
     @commands.command()
     async def embed2(self):
         """This does stuff!"""
-
+        
         #Your code will go here
-        await self.bot.send_message(message.channel, embed=testEmbed)
+        await self.bot.say(content="this `supports` __a__ **subset** *of* ~~markdown~~ 😃 ```js\nfunction foo(bar) {\n  console.log(bar);\n}\n\nfoo(1);```", embed=embed)
 
 def setup(bot):
     bot.add_cog(test(bot))
