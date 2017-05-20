@@ -32,6 +32,18 @@ class test:
 
         #Your code will go here
         await self.bot.say(embed=testEmbed)
+        
+    @commands.command()
+    async def embed2(self):
+        """This does stuff!"""
+
+        #Your code will go here
+        await self.bot.say("TEST")   
+        message.channel.send('', {embed: {
+        color: 3447003,
+        description: 'A very simple Embed!'
+}});
+   
 
 def setup(bot):
     bot.add_cog(test(bot))
