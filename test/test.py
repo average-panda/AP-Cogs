@@ -48,7 +48,7 @@ class test:
         await self.bot.say(content="TEST TEST TEST ```TEST TEST TEST```")
         
     @commands.command()
-    async def embed2(self):
+    async def embed4(self):
         """This does stuff!"""
         
         #Your code will go here
